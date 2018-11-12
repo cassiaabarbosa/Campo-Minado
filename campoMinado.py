@@ -1,5 +1,6 @@
 import pygame
 import random
+import sys
 
 
 #Cria o campo
@@ -105,6 +106,8 @@ def buscaPosE(quadrado, grade, screen): #Pega a posição do 'clique' do botão 
                     pygame.draw.rect(screen, (22, 79, 170), (coord[i][j][0],coord[i][j][1],40,40))
                 elif grade[i][j] == -1:
                     pygame.draw.rect(screen, (239, 9, 17), (coord[i][j][0], coord[i][j][1], 40, 40))
+                    pygame.display.update()
+                    sys.exit()
                 else:
                     pygame.draw.rect(screen, (22, 79, 170), (coord[i][j][0], coord[i][j][1], 40, 40))
                     texto = str(grade[i][j])
